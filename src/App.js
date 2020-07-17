@@ -1,14 +1,9 @@
 import React, {Component} from 'react'
 import FeaturesList from './FeaturesList'
 import SummaryList from './SummaryList'
-
-
-
+import './App.css';
 
 class App extends Component {
-
-
-
   constructor(props) {
     super(props);
     this.state={
@@ -34,23 +29,15 @@ class App extends Component {
     }
   }
 
-
     updateFeature = (feature, newValue) => {
       const selected=Object.assign({}, this.state.selected);
       selected[feature]=newValue;
-      
-      
-      
-       let total=this.state.total+newValue.cost
+      let total=this.state.total+newValue.cost
     
-     
       this.setState({
         selected:selected,
         total,
       }
-
-     
-
       );
     }
     
@@ -72,6 +59,5 @@ class App extends Component {
       );
     }
   }
-
 
 export default App;
