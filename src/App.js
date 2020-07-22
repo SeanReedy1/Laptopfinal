@@ -30,6 +30,7 @@ class App extends Component {
   }
 
     updateFeature = (feature, newValue) => {
+      console.log(this.state);
       const selected=Object.assign({}, this.state.selected);
       selected[feature]=newValue;
       let total=this.state.total+newValue.cost
